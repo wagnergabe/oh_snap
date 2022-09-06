@@ -28,7 +28,9 @@ describe('emoji is visible', () => {
   describe('links are visible', () => {
     it('inserts text into the links', () => {
         const { getByTestId } = render(<Nav />);
+        // eslint-disable-next-line testing-library/prefer-screen-queries
         expect (getByTestId('link')).toHaveTextContent('Oh Snap!');
+        // eslint-disable-next-line testing-library/prefer-screen-queries
         expect (getByTestId('about')).toHaveTextContent('About me'); 
     });
   })
